@@ -31,7 +31,7 @@ function Settings(props) {
                 .then((data) => {
                     localStorage.setItem("user", JSON.stringify({...state, picture:data.url}))
                     dispatch({type:"UPDATEPICTURE", payload:data.url})
-                    fetch("http://localhost:5000/updatepicture", {
+                    fetch("https://snapshare-server.onrender.com/updatepicture", {
                         method:"put",
                         headers:{
                             Authorization: "ghost " + localStorage.getItem("jwt"),
@@ -64,7 +64,7 @@ function Settings(props) {
     const editName = () =>{
         if(name){
             setLoading2(true)
-            fetch("http://localhost:5000/editname", {
+            fetch("https://snapshare-server.onrender.com/editname", {
                 method:"put",
                 headers:{
                     Authorization: "ghost " + localStorage.getItem("jwt"),
