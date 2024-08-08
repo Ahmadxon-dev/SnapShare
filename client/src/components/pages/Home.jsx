@@ -25,7 +25,7 @@ const Home = () => {
     const [comment, setComment] = useState("")
     const [showComments, setShowComments] = useState(false)
     useEffect(() => {
-        fetch("http://localhost:5000/allposts", {
+        fetch("https://snapshare-server.onrender.com/allposts", {
             headers: {
                 Authorization: "ghost " + localStorage.getItem("jwt")
             }
@@ -35,7 +35,7 @@ const Home = () => {
         // console.log(data)
     }, [])
     const likePosts = id => {
-        fetch('http://localhost:5000/like', {
+        fetch('https://snapshare-server.onrender.com/like', {
             method: 'put',
             headers: {
                 Authorization: "ghost " + localStorage.getItem("jwt"),
@@ -58,7 +58,7 @@ const Home = () => {
             .catch(err => console.log(err))
     }
     const unLikePosts = id => {
-        fetch('http://localhost:5000/unlike', {
+        fetch('https://snapshare-server.onrender.com/unlike', {
             method: 'put',
             headers: {
                 Authorization: "ghost " + localStorage.getItem("jwt"),
@@ -80,7 +80,7 @@ const Home = () => {
             .catch(err => console.log(err))
     }
     const commentPost = (text, postId) => {
-        fetch("http://localhost:5000/comments", {
+        fetch("https://snapshare-server.onrender.com/comments", {
             method: 'put',
             headers: {
                 Authorization: "ghost " + localStorage.getItem("jwt"),
@@ -106,7 +106,7 @@ const Home = () => {
             .catch(err => console.log(err))
     }
     const deletePost = (postID) => {
-        fetch(`http://localhost:5000/deletepost/${postID}`, {
+        fetch(`https://snapshare-server.onrender.com/deletepost/${postID}`, {
             method: 'delete',
             headers: {
                 Authorization: "ghost " + localStorage.getItem("jwt"),
