@@ -11,7 +11,7 @@ const Profile = () => {
     const [profile, setProfile] = useState([])
     const {state, dispatch} = useContext(UserContext)
     useEffect(() => {
-        fetch("http://localhost:5000/myposts", {
+        fetch("https://snapshare-server.onrender.com/myposts", {
             headers: {
                 Authorization: "ghost " + localStorage.getItem("jwt")
             }
