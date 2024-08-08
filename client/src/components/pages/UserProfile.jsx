@@ -13,7 +13,7 @@ function UserProfile(props) {
     const [isFollow, setIsFollow] = useState(state ? !state.following.includes(userId) : true)
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/user/${userId}`,{
+        fetch(`https://snapshare-server.onrender.com/user/${userId}`,{
             headers:{
                 Authorization: "ghost " + localStorage.getItem("jwt")
             }
@@ -25,7 +25,7 @@ function UserProfile(props) {
 
     }, [userId])
     const followUser = ()=>{
-        fetch("http://localhost:5000/follow", {
+        fetch("https://snapshare-server.onrender.com/follow", {
             method:"put",
             headers:{
                 Authorization: "ghost " + localStorage.getItem("jwt"),
@@ -54,7 +54,7 @@ function UserProfile(props) {
     }
 
     const unfollowUser = ()=>{
-        fetch("http://localhost:5000/unfollow", {
+        fetch("https://snapshare-server.onrender.com/unfollow", {
             method:"put",
             headers:{
                 Authorization: "ghost " + localStorage.getItem("jwt"),
