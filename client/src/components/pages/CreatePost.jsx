@@ -43,7 +43,7 @@ const CreatePost = () => {
 
     useEffect(()=>{
         if (url){
-            fetch("http://localhost:5000/createpost", {
+            fetch("https://snapshare-server.onrender.com/createpost", {
                 method:'post',
                 headers:{
                     "Content-type":"application/json",
