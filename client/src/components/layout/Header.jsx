@@ -73,7 +73,7 @@ const Header = memo(() => {
 
     const searchUser = query => {
         setSearch(query)
-        fetch("http://localhost:5000/searchuser", {
+        fetch("https://snapshare-server.onrender.com/searchuser", {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
