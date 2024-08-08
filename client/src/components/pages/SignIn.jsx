@@ -39,7 +39,7 @@ const SignIn = () => {
             })
             return
         }
-        fetch("http://localhost:5000/signup", {
+        fetch("https://snapshare-server.onrender.com/signup", {
             method: "post",
             headers:{
                 "Content-Type": "application/json"
@@ -88,7 +88,7 @@ const SignIn = () => {
             return
         }
 
-        fetch("http://localhost:5000/signin", {
+        fetch("https://snapshare-server.onrender.com/signin", {
             method: "post",
             headers:{
                 "Content-Type": "application/json"
