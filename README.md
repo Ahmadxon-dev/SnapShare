@@ -3,7 +3,6 @@
 ## MERN Stack App
 
 Snapshare is a modern social media application.  
-Snapshare is a modern social media application built with the MERN stack.  
 Users can create and interact with posts, connect with others, and manage their profiles in a clean and responsive environment.
 
 ---
